@@ -66,6 +66,7 @@ body {
 
 .product-card__image {
     max-width: 100%;
+		width: 100%;
     object-fit: cover;
 }
 
@@ -81,4 +82,38 @@ body {
     padding: .8rem;
     border-radius: .8rem;
     cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: fit-content;
+	max-width: 90%;
+}
+
+.modal::before {
+	position: fixed;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "";
+	width: 100vw;
+	height: 100vh;
+	background-color: #31313174;
+}
+
+.modal__content {
+	background-color: #fff;
+	box-shadow: 0 0 10px 0 var(--card-shadow);
+	border-radius: .8rem;
+	padding: 1rem;
+}
+
+.modal .product-card {
+	position: relative;
+	z-index: 2;
+	box-shadow: none;
 }
